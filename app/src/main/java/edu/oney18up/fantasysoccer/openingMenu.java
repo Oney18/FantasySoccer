@@ -4,8 +4,39 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.Spinner;
+
+import java.util.ArrayList;
 
 public class openingMenu extends AppCompatActivity {
+
+
+    private ArrayList<String> teamList;
+    ArrayAdapter<String> teamAdapter;
+    Spinner teamSpinner;
+
+    private ArrayList<String> memberList;
+    ArrayAdapter<String> memberAdapter;
+    Spinner memberSpinner;
+
+    Button createTeam;
+    Button findPlayer;
+    Button updatePlayer;
+    Button createPlayer;
+
+    EditText playerName;
+    EditText teamName;
+    EditText speedVal;
+    EditText agilVal;
+    EditText powVal;
+    EditText skillVal;
+
+    ImageView teamLogo;
+    ImageView playerPicture;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
