@@ -1,5 +1,6 @@
 package edu.oney18up.fantasysoccer;
 
+import android.graphics.drawable.Drawable;
 import android.media.Image;
 
 /**
@@ -13,7 +14,7 @@ public class SoccerPlayer {
     private int power;
     private int skill;
     private String position;
-    private String picID;
+    private Drawable pic;
 
     public SoccerPlayer(String name, String team, int speed, int agility,
                         int power, int skill, String position)
@@ -25,7 +26,7 @@ public class SoccerPlayer {
         this.power = power;
         this.skill = skill;
         this.position = position;
-        this.picID = null;
+        this.pic = null;
 
     }
 
@@ -39,9 +40,9 @@ public class SoccerPlayer {
         this.position = position;
     }
 
-    public void setPicID(String ID)
+    public void setPicID(String filePath)
     {
-        this.picID = ID;
+        this.pic = Drawable.createFromPath(filePath);
     }
 
     public String getName()
@@ -54,9 +55,9 @@ public class SoccerPlayer {
         return team;
     }
 
-    public String getPicID()
+    public Drawable getPic()
     {
-        return picID;
+        return pic;
     }
 
     public int getSpeed()

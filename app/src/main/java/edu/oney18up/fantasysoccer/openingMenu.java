@@ -1,5 +1,6 @@
 package edu.oney18up.fantasysoccer;
 
+import android.app.Activity;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -12,7 +13,7 @@ import android.widget.Spinner;
 
 import java.util.ArrayList;
 
-public class openingMenu extends AppCompatActivity {
+public class openingMenu extends Activity {
 
 
     private ArrayList<String> teamList;
@@ -42,6 +43,7 @@ public class openingMenu extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_opening_menu);
+
     }
 
     @Override

@@ -12,7 +12,8 @@
     <string name="agility">Agility:</string>
     <string name="power">Power:</string>
     <string name="skill">Skill:</string>
-    <string name="find_player">Find Player</string>
-    <string name="add_player">Add Player to Team</string>
-    <string name="create_player">Create Player</string>
+    <string name="find_player">Find\nPlayer</string>
+    <string name="create_player">Create\nPlayer</string>
+    <string name="create_team">Create Team</string>
+    <string name="team_name">Team Name:</string>
 </resources>

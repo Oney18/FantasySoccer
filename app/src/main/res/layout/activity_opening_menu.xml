@@ -4,7 +4,156 @@
     android:layout_height="match_parent"
     android:orientation="horizontal"
     android:weightSum="2"
-    tools:context=".openingMenu">
+    tools:context=".openingMenu"
+    android:baselineAligned="false"
+    android:background="@color/menu_green">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:id="@+id/leftHalf">
+
+        <Space
+            android:layout_width="20dp"
+            android:layout_height="20dp" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/team_bar">
+
+            <Space
+                android:layout_width="40dp"
+                android:layout_height="20dp" />
+
+            <TextView
+                android:layout_width="270dp"
+                android:layout_height="wrap_content"
+                android:text="@string/team_list"
+                android:id="@+id/team_list_text"
+                android:textSize="40sp"
+                android:textColor="@color/black" />
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/team_spinner"
+                android:spinnerMode="dropdown" />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="20dp"
+            android:layout_height="20dp" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/member_bar">
+
+            <Space
+                android:layout_width="40dp"
+                android:layout_height="20dp" />
+
+            <TextView
+                android:layout_width="270dp"
+                android:layout_height="wrap_content"
+                android:text="@string/member_list"
+                android:id="@+id/member_text"
+                android:textColor="@color/black"
+                android:textSize="40sp" />
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/member_spinner"
+                android:spinnerMode="dropdown" />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="20dp"
+            android:layout_height="20dp" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/create_team_bar">
+
+            <Space
+                android:layout_width="40dp"
+                android:layout_height="20dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/team_name"
+                android:id="@+id/team_name_text"
+                android:textColor="@color/black"
+                android:textSize="40sp" />
+
+            <EditText
+                android:layout_width="250sp"
+                android:layout_height="wrap_content"
+                android:id="@+id/team_name_editable"
+                android:editable="false"
+                android:inputType="text"
+                android:textSize="40sp"
+                android:textColor="@color/black" />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="20dp"
+            android:layout_height="20dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/create_team"
+            android:id="@+id/create_team"
+            android:layout_gravity="center_horizontal"
+            android:textSize="40sp" />
+
+        <Space
+            android:layout_width="20dp"
+            android:layout_height="20dp" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/images_bar"
+            android:layout_gravity="center_horizontal">
+
+            <Space
+                android:layout_width="50dp"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/team_logo_view"
+                android:layout_gravity="center_horizontal"
+                android:contentDescription="TeamLogo" />
+
+            <Space
+                android:layout_width="100dp"
+                android:layout_height="20dp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/member_image_view" />
+
+            <Space
+                android:layout_width="50dp"
+                android:layout_height="20dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
 
     <LinearLayout
         android:orientation="vertical"
@@ -12,31 +161,206 @@
         android:layout_height="match_parent"
         android:layout_weight="1">
 
+        <Space
+            android:layout_width="20dp"
+            android:layout_height="20dp" />
+
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:id="@+id/teamBar">
+            android:id="@+id/name_bar">
+
+            <Space
+                android:layout_width="20dp"
+                android:layout_height="20dp" />
+
+            <TextView
+                android:layout_width="175dp"
+                android:layout_height="wrap_content"
+                android:text="@string/player"
+                android:id="@+id/player_text"
+                android:textSize="50sp"
+                android:textColor="@color/black" />
+
+            <EditText
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_name"
+                android:textColor="@color/black"
+                android:inputType="text"
+                android:textSize="40dp" />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="20dp"
+            android:layout_height="20dp" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/team_bar_right">
+
+            <Space
+                android:layout_width="20dp"
+                android:layout_height="20dp" />
+
+            <TextView
+                android:layout_width="175dp"
+                android:layout_height="wrap_content"
+                android:text="@string/team"
+                android:id="@+id/team_text"
+                android:textColor="@color/black"
+                android:textSize="50sp" />
+
+            <Spinner
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/team_spinner_selector"
+                android:spinnerMode="dropdown" />
+
+        </LinearLayout>
+
+        <Space
+            android:layout_width="20dp"
+            android:layout_height="20dp" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/stat_bar_1"
+            android:layout_gravity="center_horizontal">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/team_list"
-                android:id="@+id/team_list_text"
-                android:textSize="50dp"
-                android:textColor="@color/black" />
+                android:text="@string/speed"
+                android:id="@+id/speed_text"
+                android:textColor="@color/black"
+                android:textSize="40sp" />
 
-            <Spinner
-                android:layout_width="253dp"
+            <EditText
+                android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:id="@+id/teamSpinner" />
-        </LinearLayout>
-    </LinearLayout>
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/speed_val"
+                android:textColor="@color/black"
+                android:textSize="35sp" />
 
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_weight="1"></LinearLayout>
+            <Space
+                android:layout_width="30dp"
+                android:layout_height="20dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/agility"
+                android:id="@+id/agil_text"
+                android:textColor="@color/black"
+                android:textSize="40sp" />
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/agil_val"
+                android:textColor="@color/black"
+                android:textSize="30sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/stat_bar_2"
+            android:layout_gravity="center_horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/power"
+                android:id="@+id/pow_text"
+                android:textColor="@color/black"
+                android:textSize="40sp" />
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/pow_val"
+                android:textColor="@color/black"
+                android:textSize="35sp" />
+
+            <Space
+                android:layout_width="65dp"
+                android:layout_height="20dp"
+                android:id="@+id/space" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/skill"
+                android:id="@+id/skill_text"
+                android:textColor="@color/black"
+                android:textSize="40sp" />
+
+            <EditText
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:ems="10"
+                android:id="@+id/skill_val"
+                android:textColor="@color/black"
+                android:textSize="30sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="match_parent"
+            android:weightSum="2">
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/player_image"
+                android:layout_weight="1"
+                android:contentDescription="the player's image" />
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center_vertical"
+                android:id="@+id/player_buttons">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/find_player"
+                    android:id="@+id/find_player"
+                    android:textColor="@color/black"
+                    android:textSize="30sp"
+                    android:layout_gravity="center_horizontal" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/create_player"
+                    android:id="@+id/create_player_button"
+                    android:textSize="30dp"
+                    android:textColor="@color/black"
+                    android:layout_gravity="center_horizontal" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
 </LinearLayout>
